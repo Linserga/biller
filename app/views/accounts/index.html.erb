@@ -1,0 +1,8 @@
+<ul>
+	<% @accounts.each do |account| %>
+		<li>
+			<%= link_to account.name, account_path(account) %> |
+			<%= account.type %>
+		</li>		
+	<%end%>
+</ul>

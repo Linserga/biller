@@ -1,0 +1,12 @@
+<ul>
+	<% @employees.each do |employee| %>
+		<li>
+			<%= link_to employee.name, employee_path(employee) %> |
+			<%= employee.type %>
+		</li>		
+	<%end%>
+</ul>
+<%= form_for Employee.new do |f| %>
+	<%= f.text_field :name %>
+	<%= f.submit %>
+<%end%>
